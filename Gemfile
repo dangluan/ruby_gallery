@@ -10,10 +10,10 @@ group :development do
   gem "rdoc", "~> 3.12"
   gem "bundler", "~> 1.3.4"
   gem "jeweler", "~> 1.8.4" 
-  gem "bourbon"
-  gem "compass-rails"
   #gem "rcov", ">= 0"
 end
 
+gem "bourbon", "~> 3.0.0"
+gem "compass-rails"
 gem "paperclip", "~> 3.0"
-
+gem "jquery-fileupload-rails"
