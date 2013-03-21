@@ -37,6 +37,7 @@ Gem::Specification.new do |s|
     "lib/generators/ruby_gallery/install_generator.rb",
     "lib/generators/ruby_gallery/ruby_gallery_generator.rb",
     "lib/ruby_gallery.rb",
+    "ruby_gallery.gemspec",
     "test/helper.rb",
     "test/test_ruby_gallery.rb"
   ]
