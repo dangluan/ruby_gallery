@@ -56,14 +56,14 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, ["~> 1.3.4"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
-      s.add_development_dependency(%q<bourbon>, [">= 0"])
+      s.add_development_dependency(%q<bourbon>, ["~> 3.0.0"])
     else
       s.add_dependency(%q<paperclip>, ["~> 3.0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, ["~> 1.3.4"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
-      s.add_dependency(%q<bourbon>, [">= 0"])
+      s.add_dependency(%q<bourbon>, ["~> 3.0.0"])
     end
   else
     s.add_dependency(%q<paperclip>, ["~> 3.0"])
@@ -71,7 +71,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, ["~> 1.3.4"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
-    s.add_dependency(%q<bourbon>, [">= 0"])
+    s.add_dependency(%q<bourbon>, ["~> 3.0.0"])
   end
 end
 
