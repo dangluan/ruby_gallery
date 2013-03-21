@@ -1,4 +1,4 @@
-class RubyGalleryAddColumnTo<%= table_name.camelize %> < ActiveRecord::Migration
+class RubyGalleryAddColumnsTo<%= table_name.camelize %> < ActiveRecord::Migration
   def self.up
     add_attachment :<%= table_name %>, :photo
   end
