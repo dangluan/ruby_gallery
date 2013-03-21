@@ -1,11 +1,12 @@
 
   clearInterval(window.refeshWork);
 	window.refeshWork = null;
-
-  $('#fileupload').fileupload({
+  
+  jQuery('#fileupload').fileupload({
      dropZone: $('#fileupload'),
   	 progressInterval: 20,		
      add: function(e,data){
+       
        if ($('span#upload_button').attr('status') == 'process'){
   	  		return false;
         } else {
@@ -26,6 +27,7 @@
   			// $('#file_box ul#photos_album li.new-photo').find('#progress div.bar').css('width',progress + '%' );
   	 },
   	 done: function(e, data){
+  	   
   		var report = '';
   		if(data.result != 'failed'){
   		  var res = data.result;

@@ -16,6 +16,11 @@ module RubyGallery
       def copy_jsfile
         copy_file "../../../app/assets/javascripts/ruby_gallery.js", "app/assets/javascripts/ruby_gallery.js"
       end
+      
+      def copy_cssfile
+        copy_file "../../../app/assets/stylesheets/ruby_gallery.css.scss", "app/assets/stylesheets/ruby_gallery.css.scss"
+      end
+      
     end
   end
 end

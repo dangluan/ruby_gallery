@@ -1,0 +1,92 @@
+@import "bourbon";
+form.fileupload{
+  width:110px;
+  float:left;
+}
+
+div.upload-box{
+  display: block;
+  margin: 0 auto !important;
+  width: 500px !important;
+}
+
+
+div.file-box{
+  
+  display:block;
+  margin-bottom: 5px;
+  height:185px;
+  span#attachment_display{
+    @include clearfix;
+    span{
+      float: left;
+      display:block;
+      height:20px;
+      float: left;
+    }
+    strong {
+      float:left;
+      margin-top: 20px;
+    }
+  }
+}
+
+
+
+ul.activities-button-list{
+  display:block;
+  width:305px;
+  margin-top:10px;
+  margin-left:98px;
+  li.btn{
+    display:block;
+    float:left;
+    width: 100px;
+    height:20px;
+    @include linear-gradient(lighten(#80C66D, 5%), darken(#80C66D, 10%));
+    border: 1px solid #ccc;
+    border-left:none;
+    padding-top: 5px;
+    text-align:center;
+    color:#fff;
+    &:hover{
+      cursor:pointer;
+    }
+    
+    &:active{
+      @include linear-gradient(#80C66D, darken(#80C66D, 20%));
+      @include box-shadow(inset 0 0 2px darken(#80C66D, 30%));
+    }
+    
+    &.selected{
+      @include linear-gradient(#80C66D, darken(#80C66D, 20%));
+      @include box-shadow(inset 0 0 2px darken(#80C66D, 30%));
+    }
+  }
+  
+  li.btn.first{
+    border-left: 1px solid #ccc;
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+  li.btn.last{
+     border-left:none;
+     border-radius: 0px 5px 5px 0px;
+     
+  }
+  
+}
+
+span.upload-button {
+  float:none;
+  @include button(pill);
+}
+
+a.upload-button{
+   @include button(pill);
+}
+
+span.upload-button.have-file{
+  float:none;
+  @include button(pill,#FCF0BF);  
+}
