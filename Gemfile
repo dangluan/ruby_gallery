@@ -9,9 +9,10 @@ group :development do
   gem "shoulda", ">= 0"
   gem "rdoc", "~> 3.12"
   gem "bundler", "~> 1.3.4"
-  gem "jeweler", "~> 1.8.4"  
+  gem "jeweler", "~> 1.8.4" 
+  gem "bourbon"
   #gem "rcov", ">= 0"
 end
 
 gem "paperclip", "~> 3.0"
-gem "bourbon"
+
