@@ -1,10 +1,10 @@
-
-(function($) {
+$(document).ready(function(){
+  clearInterval(window.refeshWork);
+	window.refeshWork = null;
   $(document.body).delegate("input.upload-button-input", "click", function(e){
     alert(1);
     e.preventDefault();
-    clearInterval(window.refeshWork);
-  	window.refeshWork = null;
+    
   
     $('#fileupload').fileupload({
        dropZone: $('#fileupload'),

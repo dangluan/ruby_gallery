@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'jquery-fileupload-rails'
 require 'paperclip'
 
 module RubyGallery
