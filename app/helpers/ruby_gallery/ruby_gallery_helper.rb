@@ -4,7 +4,7 @@ module RubyGallery::RubyGalleryHelper
     content_tag(:div, class: "upload-box") do
       [content_tag(:div, 'upload album', class: "legend"),
       content_tag(:div, class: "form-box") do
-        [content_tag(:form, id: "fileupload", class: "fileupload", method: "POST", enctype: "multipart/form-data", action: "/#{model_name}") do
+        [content_tag(:form, id: "fileupload", class: "fileupload", method: "POST", enctype: "multipart/form-data", action: "/attachments/upload_album?id=#{params[:id]}") do
           content_tag(:span, id: "upload_button", class: "upload-button btn btn-success fileinput-button") do
             [content_tag(:i, "", class: "icon-plus icon-white"),
             content_tag(:span, "Upload picture"),
