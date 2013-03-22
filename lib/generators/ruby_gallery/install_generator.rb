@@ -21,6 +21,10 @@ module RubyGallery
         copy_file "../../../app/assets/stylesheets/ruby_gallery.css.scss", "app/assets/stylesheets/ruby_gallery.css.scss"
       end
       
+      
+      def add_routes
+        route "/attachments/upload_album", controller: :attachments, action: :upload_album
+      end
     end
   end
 end
