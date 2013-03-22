@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Dang"]
-  s.date = "2013-03-21"
+  s.date = "2013-03-22"
   s.description = "Upload image use gallery"
   s.email = "peter@rubify.com"
   s.extra_rdoc_files = [
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     "app/assets/stylesheets/ruby_gallery.css.scss",
     "app/controllers/attachments_controller.rb",
     "app/helpers/ruby_gallery/ruby_gallery_helper.rb",
+    "app/helpers/ruby_gallery/test_helper.rb",
     "app/models/album_attachment.rb",
     "app/models/album_photo.rb",
     "lib/generators/active_record/ruby_gallery_generator.rb",
