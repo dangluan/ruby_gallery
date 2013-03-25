@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Dang"]
-  s.date = "2013-03-22"
+  s.date = "2013-03-25"
   s.description = "Upload image use gallery"
   s.email = "peter@rubify.com"
   s.extra_rdoc_files = [
