@@ -26,10 +26,8 @@ Gem::Specification.new do |s|
     "VERSION",
     "app/assets/javascripts/ruby_gallery.js",
     "app/assets/stylesheets/ruby_gallery.css.scss",
-    "app/controllers/attachments_controller.rb",
     "app/helpers/ruby_gallery/ruby_gallery_helper.rb",
     "app/helpers/ruby_gallery/test_helper.rb",
-    "app/models/album_attachment.rb",
     "app/models/album_photo.rb",
     "lib/generators/active_record/ruby_gallery_generator.rb",
     "lib/generators/active_record/templates/album_attachment_migration.rb",
@@ -38,6 +36,7 @@ Gem::Specification.new do |s|
     "lib/generators/ruby_gallery/install_generator.rb",
     "lib/generators/ruby_gallery/ruby_gallery_generator.rb",
     "lib/ruby_gallery.rb",
+    "lib/ruby_gallery/attachments_controller.rb",
     "ruby_gallery.gemspec",
     "test/helper.rb",
     "test/test_ruby_gallery.rb"
