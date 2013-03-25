@@ -23,7 +23,7 @@ module RubyGallery
       
       
       def add_routes
-        route "match 'attachments/upload_album'"
+        route "post '/attachments/upload_album', controller: :attachments, action: :upload_album"
       end
     end
   end

@@ -1,5 +1,5 @@
-class AttachmentsController < ApplicationController
-  def upload_album
+class RubyGalleriesController::AttachmentsController < ApplicationController
+  def self.upload_album
     puts params[:id]
   end
 end
