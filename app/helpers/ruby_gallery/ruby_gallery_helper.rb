@@ -5,18 +5,16 @@ module RubyGallery::RubyGalleryHelper
     content += content_tag(:div, class: "upload-box") do
       [content_tag(:div, 'upload album', class: "legend"),
       content_tag(:div, class: "form-box") do
-        [content_tag(:form, id: "fileupload", class: "fileupload", method: "POST", enctype: "multipart/form-data", action: "/attachments/upload_album?id=#{params[:id]}") do
+        [content_tag(:form, id: "fileupload", class: "fileupload", method: "POST", enctype: "multipart/form-data", action: "/#{model_name}/upload_album?id=#{params[:id]}", multipart: true) do
           content_tag(:span, id: "upload_button", class: "upload-button btn btn-success fileinput-button", status: "") do
             [content_tag(:i, "", class: "icon-plus icon-white"),
             content_tag(:span, "Upload picture"),
-            tag(:input, class: "upload-button-input", type: :file, multiple: "", name: "file[]")].join.html_safe
+            tag(:input, class: "upload-button-input", type: :file, multiple: "multiple", name: "file")].join.html_safe
           end
         end,
         content_tag(:a, "Close", class: "cancel-button cancel-link", href: "#")].join.html_safe
       end].join.html_safe +
-      
-      
-      
+
       [content_tag(:div , id: "file_box", class: "file-box") do
         content_tag(:ul, id: "photos_album", class: "album") do
           
@@ -24,16 +22,16 @@ module RubyGallery::RubyGalleryHelper
       end].join.html_safe 
     end
     
-    content += javascript_tag(%Q{
+    content += javascript_tag(%Q[
+      $(function () {
       $('#fileupload').fileupload({
          dropZone: $('#fileupload'),
       	 progressInterval: 20,		
          add: function(e,data){
-           console.log('aa');
            if ($('span#upload_button').attr('status') == 'process'){
       	  		return false;
             } else {
-      				var types = "/(\.|\/)(png|jpg|gif|jpeg)$/i";
+      				var types = /(.)(png|jpg|gif|jpeg)$/i;
       				var file = data.files[0];
       				if (types.test(file.type) || types.test(file.name) ){
       					$('span.upload-button span').html("Processing");
@@ -61,9 +59,6 @@ module RubyGallery::RubyGalleryHelper
       			  	$('#file_box ul#photos_album').append(res);
 
       		   });
-
-      			// var t=setTimeout(function(){
-      			// }, 2000);	
       		} else {
       			$('#file_box ul#photos_album li.new-photo').html("Upload failed!");
       	  	var t = setTimeout(function(){
@@ -72,7 +67,8 @@ module RubyGallery::RubyGalleryHelper
       		}
       	 }	
       });
-    })
+      });
+    ])
     
     return content.html_safe
   end

@@ -23,7 +23,7 @@ module RubyGallery
       
       
       def add_routes
-        route "post '/attachments/upload_album', controller: :attachments, action: :upload_album"
+        route "post '/lists/upload_album', controller: :lists, action: :upload_album"
       end
     end
   end

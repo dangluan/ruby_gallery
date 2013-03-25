@@ -4,6 +4,6 @@ class RubyGalleryAddColumnsTo<%= table_name.camelize %> < ActiveRecord::Migratio
   end
   
   def self.down
-    remove_attachment :<%= table_name %>, :photo
+    remove_attachment :<%= table_name.singularize %>, :photo
   end
 end
