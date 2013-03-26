@@ -1,13 +1,11 @@
 class RubyGalleryCreateAlbumPhotos < ActiveRecord::Migration
-  def self.up
-    drop_table :album_photos
-  end
   def change
     create_table :album_photos do |b|
-      b.integer :album_attachment_id
-      b.integer :<%= table_name %>_id
+      b.belongs_to :photoable, polymorphic: true
       b.timestamps
     end
+    
+    add_index :album_photos, [:photoable_id, :photoable_type]
   end
 
 

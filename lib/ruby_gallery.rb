@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'jquery-fileupload-rails'
 require 'paperclip'
-
+require 'bourbon'
 require 'ruby_gallery/attachments_controller'
 
 module RubyGallery  
