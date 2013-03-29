@@ -26,53 +26,50 @@ form.fileupload{
 div.upload-box{
   display: block;
   margin: 0 auto !important;
-  width: 500px !important;
+  width: 450px !important;
+  div.legend {
+    border-bottom: 3px solid #bbb;
+    margin-bottom: 10px;
+    color: #999;
+    font-weight: bold;
+    font-size: 14px;
+  }
 }
 
 
 div.file-box{
-  
   display:block;
   margin-bottom: 5px;
   height:185px;
-  
+  width: 100%;
   ul {
-    width: 500px;
+    @include clearfix;
+    width: 100%;
     height: 275px;
     overflow-y: scroll;
     list-style: none;
     display: inline-block;
-    @include clearfix;
+    
     border: 1px solid #999;
     @include box-shadow(1px 3px 5px 0px #999);
     li.photo-cat {
-      margin:10px  5px 0px 10px;
-      @include box-shadow(1px 0px 5px 0px #999);
       position: relative;
       float: left;
+      width: 130px;
+      height: 125px;
+      margin-top: 10px;
+      text-align: center;
       span.remove-photo {
         position: absolute;
         top: 5px ;
-        right: 5px;
+        right: 10px;
       }
-      img{
-        @include box-shadow(1px 0px 3px #ccc);
+      a.gallery-colorbox{
+        text-decoration: none;
+        img{
+          @include box-shadow(1px 0px 3px 0px #999);
+        }
       }
-    }
-  }
-  
-  span#attachment_display{
-    @include clearfix;
-    //clear: both;
-    span{
-      float: left;
-      display:block;
-      height:20px;
-      float: left;
-    }
-    strong {
-      float:left;
-      margin-top: 20px;
     }
   }
 }
@@ -90,10 +87,6 @@ div.pic-icon{
   height:35px;
 }
 
-a.upload-button{
-   @include button(pill);
-   background: pink;
-}
 
 span.upload-button.have-file{
   float:none;

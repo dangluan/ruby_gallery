@@ -27,6 +27,18 @@ module RubyGallery
           render text: "ok"
         end
         
+        define_method("update_ruby_gallery_position") do
+          object = class_object.find(params[:id])
+          json = params[:json]
+      	  json.each do |key,value|
+      	    id = value['id']
+      	    position = value['position'] 
+      	    photo = object.album_photos.find(id)
+      	    photo.update_attribute(:position, position)
+      	  end
+          render :text => "successful"
+        end
+        
       end
     end
   end
