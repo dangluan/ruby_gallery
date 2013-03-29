@@ -9,7 +9,7 @@
    * ``rails g ruby_gallery MODEL``
       EX:
 
-              rails g ruby_gallery users (note : model is plural)
+  ``rails g ruby_gallery users`` (note : model is plural)
          
          
    * ``rake db:migrate``
