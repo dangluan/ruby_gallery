@@ -11,7 +11,7 @@
 
       EX:
 
-  ``rails g ruby_gallery users`` (note : model is plural)
+  ``rails g ruby_gallery user``
          
          
    * ``rake db:migrate``
