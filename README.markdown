@@ -4,14 +4,14 @@
 
 ## Setup
 
-   * bundle
-   * rails g ruby_gallery:install
-   * rails g ruby_gallery MODEL
+   * ``bundle``
+   * ``rails g ruby_gallery:install``
+   * ``rails g ruby_gallery MODEL``
       EX:
          rails g ruby_gallery users (note : model is plural)
          
          
-   * rake db:migrate
+   * ``rake db:migrate``
    
    
 ## Add upload form for view 
