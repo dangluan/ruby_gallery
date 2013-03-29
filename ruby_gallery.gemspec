@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "ruby_gallery"
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Dang"]
-  s.date = "2013-03-25"
+  s.date = "2013-03-29"
   s.description = "Upload image use gallery"
   s.email = "peter@rubify.com"
   s.extra_rdoc_files = [
@@ -24,16 +24,32 @@ Gem::Specification.new do |s|
     "README.markdown",
     "Rakefile",
     "VERSION",
+    "app/.DS_Store",
+    "app/assets/images/border.png",
+    "app/assets/images/controls.png",
+    "app/assets/images/loading.gif",
+    "app/assets/images/loading_background.png",
+    "app/assets/images/overlay.png",
+    "app/assets/images/upload_processing.gif",
+    "app/assets/javascripts/jquery-ui.js",
+    "app/assets/javascripts/jquery.colorbox.js",
     "app/assets/javascripts/ruby_gallery.js",
+    "app/assets/stylesheets/.DS_Store",
+    "app/assets/stylesheets/colorbox.css",
+    "app/assets/stylesheets/entypo.eot",
+    "app/assets/stylesheets/entypo.svg",
+    "app/assets/stylesheets/entypo.ttf",
+    "app/assets/stylesheets/entypo.woff",
     "app/assets/stylesheets/ruby_gallery.css.scss",
     "app/helpers/ruby_gallery/ruby_gallery_helper.rb",
     "app/helpers/ruby_gallery/test_helper.rb",
     "app/models/album_photo.rb",
+    "app/views/shared/_photo_box.html.erb",
     "lib/generators/active_record/ruby_gallery_generator.rb",
-    "lib/generators/active_record/templates/album_attachment_migration.rb",
     "lib/generators/active_record/templates/album_photo_migration.rb",
     "lib/generators/active_record/templates/migration.rb",
     "lib/generators/ruby_gallery/install_generator.rb",
+    "lib/generators/ruby_gallery/orm_helpers.rb",
     "lib/generators/ruby_gallery/ruby_gallery_generator.rb",
     "lib/ruby_gallery.rb",
     "lib/ruby_gallery/attachments_controller.rb",
