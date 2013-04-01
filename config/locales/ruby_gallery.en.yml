@@ -1,0 +1,10 @@
+en:
+  ruby_gallery:
+    web_content:
+      upload_album: Upload Album
+      upload_button: Upload
+      close_link: Close
+      no_file_selected: No file selected.
+      processing: processing
+      please_upload_image_files: Please upload image files.
+      upload_failed: Upload failed.

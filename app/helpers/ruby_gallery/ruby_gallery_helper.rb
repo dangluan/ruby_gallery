@@ -4,23 +4,23 @@ module RubyGallery::RubyGalleryHelper
     opts = {reorder: true, multiple_upload: true}.merge(opts)
     content = ""
     content += content_tag(:div, class: "upload-box") do
-      [content_tag(:div, 'Upload album', class: "legend"),
+      [content_tag(:div, t("ruby_gallery.web_content.upload_album"), class: "legend"),
       content_tag(:div, class: "form-box") do
         [content_tag(:form, id: "fileupload", class: "fileupload", method: "POST", enctype: "multipart/form-data", action: "/#{model_name}/upload_album?id=#{params[:id]}", multipart: true) do
           content_tag(:span, id: "upload_button", class: "upload-button btn btn-success fileinput-button", status: "") do
             [content_tag(:i, "", class: "icon-plus icon-white"),
-            content_tag(:span, "Upload"),
+            content_tag(:span, t("ruby_gallery.web_content.upload_button")),
             tag(:input, class: "upload-button-input", type: :file, multiple: "multiple", name: "file[]")].join.html_safe
           end
         end,
-        content_tag(:a, "Close", class: "close-link", href: "#")].join.html_safe
+        content_tag(:a, t("ruby_gallery.web_content.close_link"), class: "close-link", href: "#")].join.html_safe
       end].join.html_safe +
 
       [content_tag(:div , id: "file_box", class: "file-box", data_model: "#{model_name}", model_id: "#{object.id}") do
          content_tag(:ul, id: "photos_album", class: "album #{opts[:reorder] ? "ruby-gallery-sortable" : ""}", data_url: "/#{model_name}/update_ruby_gallery_position?id=#{object.id}") do
           
           if object.nil? || object.album_photos.size == 0
-             content_tag(:span, "No file selected", id: "no_file")
+             content_tag(:span, t("ruby_gallery.web_content.no_file_selected"), id: "no_file")
           else
             img_array = []
             object.album_photos.order("position ASC").each do |photo|
@@ -60,13 +60,13 @@ module RubyGallery::RubyGalleryHelper
         				var types = /(.)(png|jpg|gif|jpeg)$/i;
         				var file = data.files[0];
         				if (types.test(file.type) || types.test(file.name) ){
-        					$('span.upload-button span').html("processing");
+        					$('span.upload-button span').html("#{t("ruby_gallery.web_content.processing")}");
         					$("span#no_285.giffile").remove();
         					$("span#no_file").remove();
         	    	  $('#file_box ul#photos_album').append("<li class='photo-cat new-photo' ><div id='progress' class='pic-icon' ></div></li>");
         				  data.submit();
         	 			} else {
-        				  alert("Please upload image files");
+        				  alert("#{t("ruby_gallery.web_content.please_upload_image_files")}");
         				}
         			}
            },
@@ -77,12 +77,12 @@ module RubyGallery::RubyGalleryHelper
         	 done: function(e, data){
         		var report = '';
         		if(data.result != 'failed'){
-        		  $('span#upload_button span').html("Upload");
+        		  $('span#upload_button span').html("#{t("ruby_gallery.web_content.upload_button")}");
         		  var fn = renderPhoto(data.result);
         		  $('#file_box ul#photos_album li.new-photo').fadeOut();
         		  fn.call();
         		} else {
-        			$('#file_box ul#photos_album li.new-photo').html("Upload failed!");
+        			$('#file_box ul#photos_album li.new-photo').html("#{t("ruby_gallery.web_content.upload_failed")}");
         	  	var t = setTimeout(function(){
         					$('#file_box ul#photos_album li.new-photo').remove();
         			}, 2000);

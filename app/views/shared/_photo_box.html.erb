@@ -1,6 +1,7 @@
 <li class='photo-cat photo_<%=photo.id %>'  key="<%= photo.id%>">
   <span class="entypo-icon-1 remove-photo hide", photo_id="<%= photo.id %>">&#10006;</span>
-  <a class="gallery-colorbox" href="<%= photo.photo.url(:medium)%>">
-  <%= image_tag photo.photo.url(:thumb) ,size: '120x120'  %>
+  <a class="gallery-colorbox" href="<%= photo.photo.url(:original)%>">
+    <%= image_tag photo.photo.url(:medium) ,size: '120x120'  %>
+  </a>
   <input type="hidden" name="position-item" class="item-position" value="<%= photo.position%>" />
 </li>

@@ -66,8 +66,8 @@ $(document).ready(function(){
   });
   
   $(document.body).delegate('span.remove-photo','mouseout',function(event){
-    $(this).addClass('blur');
-    $(this).removeClass('hide');    
+    $(this).removeClass('blur');
+    $(this).addClass('hide');    
     
   });
 });

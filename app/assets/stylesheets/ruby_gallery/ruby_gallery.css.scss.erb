@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: "entypo";
-    src: url('/assets/entypo.eot');
-    src: url('/assets/entypo.eot?#iefix') format('embedded-opentype'),
-         url('/assets/entypo.woff') format('woff'),
-         url('/assets/entypo.ttf') format('truetype'),
-         url('/assets/entypo.svg#EntypoRegular') format('svg');
+    src: url(<%= asset_path "ruby_gallery/entypo.eot" %>);
+    src: url(<%= asset_path "ruby_gallery/entypo.eot?#iefix"%>) format('embedded-opentype'),
+         url(<%= asset_path "ruby_gallery/entypo.woff"%>) format('woff'),
+         url(<%= asset_path "ruby_gallery/entypo.ttf"%>) format('truetype'),
+         url(<%= asset_path "ruby_gallery/entypo.svg#EntypoRegular"%>) format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,34 +24,44 @@ form.fileupload{
 }
 
 div.upload-box{
+  @include clearfix;
   display: block;
-  margin: 0 auto !important;
-  width: 450px !important;
+  margin: 0 auto;
+  width:420px;
   div.legend {
+    float: left;
+    width: 100%;
     border-bottom: 3px solid #bbb;
     margin-bottom: 10px;
     color: #999;
     font-weight: bold;
     font-size: 14px;
   }
+  
+  div.form-box {
+    float: left;
+  }
 }
 
 
 div.file-box{
+  float: left;
+  @include clearfix;
   display:block;
   margin-bottom: 5px;
-  height:185px;
   width: 100%;
-  ul {
-    @include clearfix;
+  border: 1px solid #999;
+  @include box-shadow(1px 1px 3px 0px #999);
+  ul#photos_album {
     width: 100%;
+    float: left;
+    @include clearfix;
     height: 275px;
-    overflow-y: scroll;
+    overflow-y: auto;
     list-style: none;
     display: inline-block;
+    margin-left: -28px;
     
-    border: 1px solid #999;
-    @include box-shadow(1px 3px 5px 0px #999);
     li.photo-cat {
       position: relative;
       float: left;
@@ -61,13 +71,16 @@ div.file-box{
       text-align: center;
       span.remove-photo {
         position: absolute;
-        top: 5px ;
+        top: -15px ;
         right: 10px;
       }
       a.gallery-colorbox{
+        @include clearfix;
         text-decoration: none;
         img{
+          float: left;
           @include box-shadow(1px 0px 3px 0px #999);
+          
         }
       }
     }
@@ -81,7 +94,7 @@ span.upload-button {
 }
 
 div.pic-icon{
-  background: url("/assets/upload_processing.gif");
+  background: url(<%= asset_path "ruby_gallery/upload_processing.gif"%>);
   margin:45px;
   width:35px;
   height:35px;
