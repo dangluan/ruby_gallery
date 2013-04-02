@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "ruby_gallery"
-  s.version = "0.1.7"
+  s.version = "0.1.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Dang"]
-  s.date = "2013-04-01"
+  s.date = "2013-04-02"
   s.description = "Upload image use gallery"
   s.email = "peter@rubify.com"
   s.extra_rdoc_files = [
@@ -35,8 +35,12 @@ Gem::Specification.new do |s|
     "app/assets/images/ruby_gallery/upload_processing.gif",
     "app/assets/javascripts/.DS_Store",
     "app/assets/javascripts/ruby_gallery/app.js",
+    "app/assets/javascripts/ruby_gallery/ga.js",
     "app/assets/javascripts/ruby_gallery/jquery-ui.js",
     "app/assets/javascripts/ruby_gallery/jquery.colorbox.js",
+    "app/assets/javascripts/ruby_gallery/jquery.nanoscroller.js",
+    "app/assets/javascripts/ruby_gallery/main.js",
+    "app/assets/javascripts/ruby_gallery/overthrow.min.js",
     "app/assets/javascripts/ruby_gallery/ruby_gallery.js",
     "app/assets/stylesheets/.DS_Store",
     "app/assets/stylesheets/ruby_gallery/colorbox.css.erb",
@@ -44,6 +48,8 @@ Gem::Specification.new do |s|
     "app/assets/stylesheets/ruby_gallery/entypo.svg",
     "app/assets/stylesheets/ruby_gallery/entypo.ttf",
     "app/assets/stylesheets/ruby_gallery/entypo.woff",
+    "app/assets/stylesheets/ruby_gallery/main.css",
+    "app/assets/stylesheets/ruby_gallery/nanoscroller.css",
     "app/assets/stylesheets/ruby_gallery/ruby_gallery.css.scss.erb",
     "app/assets/stylesheets/ruby_gallery/styles.css",
     "app/helpers/ruby_gallery/ruby_gallery_helper.rb",
