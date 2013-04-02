@@ -27,3 +27,7 @@
 ## You can reorder images in box (default you can reorderable)
         You can set it to false 
          <%= show_gallery_images :users, {reorder: false} %>
+
+## You can disable ``close link``
+        
+        <%= show_gallery_images :users, {reorder: false , close: false }

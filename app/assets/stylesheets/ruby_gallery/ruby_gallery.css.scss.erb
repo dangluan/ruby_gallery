@@ -13,7 +13,7 @@
 
 span.entypo-icon-1{
   font-family: "entypo";
-  font-size: 3em;
+  font-size: 2em;
   color: #004F67;
   cursor: pointer;
 }
@@ -38,8 +38,10 @@ div.upload-box{
     font-size: 14px;
   }
   
-  div.form-box {
-    float: left;
+  div.nano {
+    float:left;
+    border: 1px solid #999;
+    @include box-shadow(1px 1px 3px 0px #999);
   }
 }
 
@@ -50,17 +52,14 @@ div.file-box{
   display:block;
   margin-bottom: 5px;
   width: 100%;
-  border: 1px solid #999;
-  @include box-shadow(1px 1px 3px 0px #999);
+  
   ul#photos_album {
     width: 100%;
     float: left;
     @include clearfix;
-    height: 275px;
-    overflow-y: auto;
+    height: 100%;
     list-style: none;
     display: inline-block;
-    margin-left: -28px;
     
     li.photo-cat {
       position: relative;
@@ -73,6 +72,7 @@ div.file-box{
         position: absolute;
         top: -15px ;
         right: 10px;
+        line-height: 55px;
       }
       a.gallery-colorbox{
         @include clearfix;

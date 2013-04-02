@@ -11,4 +11,6 @@
  *= require ./colorbox
  *= require ./ruby_gallery
  *= require jquery.fileupload-ui
+ *= require ./main.css
+ *= require ./nanoscroller
 */
