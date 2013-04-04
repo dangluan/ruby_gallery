@@ -13,7 +13,7 @@ group :development do
   #gem "rcov", ">= 0"
 end
 
-gem "bourbon", "~> 3.0.0"
+gem "bourbon"
 gem "compass-rails"
 gem "paperclip", "~> 3.0"
 gem "jquery-fileupload-rails"
