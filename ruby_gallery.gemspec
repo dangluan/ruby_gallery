@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "ruby_gallery"
-  s.version = "0.2.1"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Dang"]
@@ -55,8 +55,6 @@ Gem::Specification.new do |s|
     "app/helpers/ruby_gallery/ruby_gallery_helper.rb",
     "app/models/album_photo.rb",
     "app/views/shared/_photo_box.html.erb",
-    "config/initializers/_load_config.rb",
-    "config/initializers/ruby_gallery.rb",
     "config/locales/ruby_gallery.en.yml",
     "lib/generators/active_record/ruby_gallery_generator.rb",
     "lib/generators/active_record/templates/album_photo_migration.rb",
