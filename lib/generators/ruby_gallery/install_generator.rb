@@ -1,7 +1,6 @@
 require 'securerandom'
 require 'rails/generators'
 require 'rails/generators/migration'
-
 module RubyGallery
   module Generators
     class InstallGenerator < Rails::Generators::Base
@@ -20,11 +19,18 @@ module RubyGallery
       end
       
       def inject_css
-        append_to_file 'app/assets/stylesheets/application.css' do
+        file_to_append = 'app/assets/stylesheets/application.css'
+        if File.exist?('app/assets/stylesheets/application.css.scss')
+          file_to_append = 'app/assets/stylesheets/application.css.scss'
+        end
+          
+        append_to_file file_to_append do
           out = "\n"
           out << "/* *= require ruby_gallery/styles */"
         end      
+          
       end
+      
       
     end
   end

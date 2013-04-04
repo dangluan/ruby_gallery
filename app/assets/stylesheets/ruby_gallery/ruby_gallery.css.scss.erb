@@ -18,10 +18,7 @@ span.entypo-icon-1{
   cursor: pointer;
 }
 
-form.fileupload{
-  width:75px;
-  float:left;
-}
+
 
 div.upload-box{
   @include clearfix;
@@ -45,17 +42,21 @@ div.upload-box{
   }
 }
 
+form.fileupload{
+  width:75px;
+  float:left;
+}
 
 div.file-box{
   float: left;
-  @include clearfix;
   display:block;
   margin-bottom: 5px;
   width: 100%;
   
   ul#photos_album {
+    margin: 0px;
+    padding: 0px;
     width: 100%;
-    float: left;
     @include clearfix;
     height: 100%;
     list-style: none;
@@ -66,11 +67,11 @@ div.file-box{
       float: left;
       width: 130px;
       height: 125px;
-      margin-top: 10px;
+      margin-bottom: 15px;
       text-align: center;
       span.remove-photo {
         position: absolute;
-        top: -20px ;
+        top: -17px ;
         right: 10px;
         line-height: 55px;
       }

@@ -1,6 +1,8 @@
 module RubyGallery::RubyGalleryHelper
-  def show_gallery_images(model_name, opts={})
-    object = model_name.to_s.singularize.classify.constantize.find(params[:id])
+  def show_gallery_images(model_obj, opts={})
+    # object = model_name.to_s.singularize.classify.constantize.find_by_id(parent_model_id)
+    object = model_obj
+    model_name = model_obj.class.to_s.tableize
     opts = {reorder: true, close: true}.merge(opts)
     content = ""
     content = content_tag(:div, class: "upload-box") do
@@ -8,7 +10,7 @@ module RubyGallery::RubyGalleryHelper
         content_tag(:div, t("ruby_gallery.web_content.upload_album"), class: "legend"),
         content_tag(:div, class: "form-box") do
           [
-            content_tag(:form, id: "fileupload", class: "fileupload", method: "POST", enctype: "multipart/form-data", action: "/#{model_name}/upload_album?id=#{params[:id]}", multipart: true) do
+            content_tag(:form, id: "fileupload", class: "fileupload", method: "POST", enctype: "multipart/form-data", action: "/#{model_name}/upload_album?id=#{model_obj.id}", multipart: true) do
               content_tag(:span, id: "upload_button", class: "upload-button btn btn-success fileinput-button", status: "") do
                 [content_tag(:i, "", class: "icon-plus icon-white"),
                 content_tag(:span, t("ruby_gallery.web_content.upload_button")),

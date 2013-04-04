@@ -1,4 +1,11 @@
 
+
+.nano {
+	text-shadow: #eee 0 1px;
+}
+
+
+
 .small.nano {
 	background: #ffa;
 	height: 100px;
@@ -8,15 +15,13 @@
 	border-radius: 5px;
 }
 
-
 .nano .content {
-padding: 20px;
+  padding: 20px;
 }
 
+
+
 .nano .pane {
-background: #555;
-width: 8px;
-right: 1px;
   margin: 5px;
 }
 

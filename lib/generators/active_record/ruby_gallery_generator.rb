@@ -13,7 +13,6 @@ module ActiveRecord
         route "post '/#{table_name}/upload_album', controller: :#{table_name}, action: :upload_album"
         route "delete '/#{table_name}/:id/delete_photo', controller: :#{table_name}, action: :delete_photo"
         if migration_exists?("album_photos") && migration_add_columns_exists?("album_photos")
-          # migration_template "migration.rb", "db/migrate/ruby_gallery_add_columns_to_album_photos" unless migration_add_columns_exists?("album_photos")
         else
           migration_template "album_photo_migration.rb", "db/migrate/ruby_gallery_create_album_photos"
           migration_template "migration.rb", "db/migrate/ruby_gallery_add_columns_to_album_photos"

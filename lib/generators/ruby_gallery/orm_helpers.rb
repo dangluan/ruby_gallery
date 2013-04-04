@@ -39,6 +39,8 @@ CONTENT
       def controller_path
         @controller_path ||= File.join("app", "controllers", "#{table_name}_controller.rb")
       end
+      
+      
     end
   end
 end
