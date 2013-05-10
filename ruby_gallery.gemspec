@@ -80,7 +80,7 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<bourbon>, [">= 0"])
       s.add_runtime_dependency(%q<compass-rails>, [">= 0"])
-      s.add_runtime_dependency(%q<paperclip>, ["~> 3.0"])
+      s.add_runtime_dependency(%q<paperclip>, ["~> 3.0.4"])
       s.add_runtime_dependency(%q<jquery-fileupload-rails>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
@@ -89,7 +89,7 @@ Gem::Specification.new do |s|
     else
       s.add_dependency(%q<bourbon>, [">= 0"])
       s.add_dependency(%q<compass-rails>, [">= 0"])
-      s.add_dependency(%q<paperclip>, ["~> 3.0"])
+      s.add_dependency(%q<paperclip>, ["~> 3.0.4"])
       s.add_dependency(%q<jquery-fileupload-rails>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
@@ -99,7 +99,7 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<bourbon>, [">= 0"])
     s.add_dependency(%q<compass-rails>, [">= 0"])
-    s.add_dependency(%q<paperclip>, ["~> 3.0"])
+    s.add_dependency(%q<paperclip>, ["~> 3.0.4"])
     s.add_dependency(%q<jquery-fileupload-rails>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
