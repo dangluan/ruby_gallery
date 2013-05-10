@@ -56,15 +56,15 @@ GEM
       railties (>= 3.1)
     json (1.7.7)
     metaclass (0.0.1)
-    mime-types (1.21)
+    mime-types (1.23)
     mocha (0.13.3)
       metaclass (~> 0.0.1)
     multi_json (1.7.1)
-    paperclip (3.4.1)
+    paperclip (3.0.4)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
-      cocaine (~> 0.5.0)
+      cocaine (>= 0.0.2)
       mime-types
     rack (1.4.5)
     rack-cache (1.2)
@@ -109,6 +109,6 @@ DEPENDENCIES
   compass-rails
   jeweler (~> 1.8.4)
   jquery-fileupload-rails
-  paperclip (~> 3.0)
+  paperclip (~> 3.0.4)
   rdoc (~> 3.12)
   shoulda
