@@ -13,6 +13,7 @@ group :development do
   #gem "rcov", ">= 0"
 end
 
+gem 'cocaine', '0.3.2'
 gem "bourbon"
 gem "compass-rails"
 gem "paperclip", "~> 3.0"
