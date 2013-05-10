@@ -17,4 +17,3 @@ gem "bourbon"
 gem "compass-rails"
 gem "paperclip", "~> 3.0"
 gem "jquery-fileupload-rails"
-gem 'cocaine', '~>0.5.1' 
