@@ -11,7 +11,6 @@ group :development do
   gem "bundler", "~> 1.3.4"
   gem "jeweler", "~> 1.8.4" 
   #gem "rcov", ">= 0"
-  gem "rake", "v0.9.2.2"
 end
 
 gem "bourbon"
