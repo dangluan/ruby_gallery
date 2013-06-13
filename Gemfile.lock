@@ -110,6 +110,5 @@ DEPENDENCIES
   compass-rails
   jeweler (~> 1.8.4)
   jquery-fileupload-rails
-  paperclip (~> 3.0.4)
   rdoc (~> 3.12)
   shoulda
