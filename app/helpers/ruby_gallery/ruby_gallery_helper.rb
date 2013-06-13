@@ -56,7 +56,7 @@ module RubyGallery::RubyGalleryHelper
     end
     
     content += javascript_tag(%Q{
-      $(function () {
+      jQuery(function ($) {
         RubyGallery.init();
       });
     })
