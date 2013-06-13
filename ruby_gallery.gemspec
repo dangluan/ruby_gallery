@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "ruby_gallery"
-  s.version = "0.2.4"
+  s.version = "0.2.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Dang"]
-  s.date = "2013-04-04"
+  s.date = "2013-05-10"
   s.description = "Upload image use gallery"
   s.email = "peter@rubify.com"
   s.extra_rdoc_files = [
@@ -80,7 +80,7 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<bourbon>, [">= 0"])
       s.add_runtime_dependency(%q<compass-rails>, [">= 0"])
-      s.add_runtime_dependency(%q<paperclip>, ["~> 3.0"])
+      s.add_runtime_dependency(%q<paperclip>, ["~> 3.0.4"])
       s.add_runtime_dependency(%q<jquery-fileupload-rails>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
@@ -89,7 +89,7 @@ Gem::Specification.new do |s|
     else
       s.add_dependency(%q<bourbon>, [">= 0"])
       s.add_dependency(%q<compass-rails>, [">= 0"])
-      s.add_dependency(%q<paperclip>, ["~> 3.0"])
+      s.add_dependency(%q<paperclip>, ["~> 3.0.4"])
       s.add_dependency(%q<jquery-fileupload-rails>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
@@ -99,7 +99,7 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<bourbon>, [">= 0"])
     s.add_dependency(%q<compass-rails>, [">= 0"])
-    s.add_dependency(%q<paperclip>, ["~> 3.0"])
+    s.add_dependency(%q<paperclip>, ["~> 3.0.4"])
     s.add_dependency(%q<jquery-fileupload-rails>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
