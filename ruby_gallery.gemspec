@@ -65,7 +65,7 @@ Gem::Specification.new do |s|
     "lib/generators/ruby_gallery/ruby_gallery_generator.rb",
     "lib/ruby_gallery.rb",
     "lib/ruby_gallery/attachments_controller.rb",
-    "ruby_gallery-0.2.5.gem",
+    "ruby_gallery-0.2.7.gem",
     "ruby_gallery.gemspec",
     "test/helper.rb",
     "test/test_ruby_gallery.rb"
