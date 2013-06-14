@@ -1,9 +1,9 @@
 class RubyGalleryAddColumnsToAlbumPhotos < ActiveRecord::Migration
-  def self.up
-    has_attached_file :album_photos, :photo
+  def change_table :album_photos do |t|
+    t.attachment, :photo
   end
   
   def self.down
-    has_attached_file :album_photos , :photo
+    remove_attachment :album_photos , :photo
   end
 end
