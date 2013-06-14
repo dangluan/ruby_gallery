@@ -54,12 +54,12 @@ GEM
       railties (>= 3.1)
     json (1.8.0)
     mime-types (1.23)
-    multi_json (1.7.6)
-    paperclip (3.0.4)
+    multi_json (1.7.7)
+    paperclip (3.4.2)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
-      cocaine (>= 0.0.2)
+      cocaine (~> 0.5.0)
       mime-types
     rack (1.4.5)
     rack-cache (1.2)
@@ -96,7 +96,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86-mingw32
 
 DEPENDENCIES
   bourbon
@@ -104,6 +103,6 @@ DEPENDENCIES
   compass-rails
   jeweler (~> 1.8.4)
   jquery-fileupload-rails
-  paperclip (~> 3.0.4)
+  paperclip (~> 3.0)
   rdoc (~> 3.12)
   shoulda
