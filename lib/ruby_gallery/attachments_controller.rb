@@ -9,15 +9,10 @@ module RubyGallery
       instance_eval do
         define_method("upload_album") do
           object = class_object.find(params[:id])
-          # 10.times {
-            
-            photo = object.album_photos.build({photo: (params[:file] and params[:file].is_a?(Array)) ? params[:file][0] : params[:file]})
-            photo.save
-          # }
-          
+          photo = object.album_photos.build({photo: (params[:file] and params[:file].is_a?(Array)) ? params[:file][0] : params[:file]})
+          photo.save 
           eval("@#{class_name} = #{class_object_name}.find(params[:id])")
           render :partial => "shared/photo_box",locals: {photo: photo}
-          # render text: "successful"
         end
         
         define_method("delete_photo") do
