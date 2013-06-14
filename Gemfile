@@ -15,5 +15,5 @@ end
 
 gem "bourbon"
 gem "compass-rails"
-gem "paperclip", "~> 3.0.4"
+gem "paperclip", "~> 3.0"
 gem "jquery-fileupload-rails"
